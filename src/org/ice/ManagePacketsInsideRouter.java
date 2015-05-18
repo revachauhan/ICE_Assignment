@@ -49,7 +49,7 @@ public class ManagePacketsInsideRouter {
 			System.out.println(p.toString());
 		}
 		System.out.println();
-		packetSorting(q);
+		
 	}
 	private static synchronized void packetSorting(List<Packet> q) {
 		System.out.println("After sorting on Packet");
