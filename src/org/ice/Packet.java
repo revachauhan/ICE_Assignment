@@ -7,7 +7,7 @@ public abstract class Packet {
 	int size;
 	int time;
 	static int count = 1;
-	//Setter and getters
+	//Setter and getters for member variables
 	public String getName() {
 		return name;
 	}
