@@ -40,7 +40,8 @@ public class ManagePacketsInsideRouter {
 
 		insertIntoRouter(packetQueue);
 	}
-	private static void insertIntoRouter(List<Packet> q){
+	//synchronized to make it thread safe for concurrency 
+	private static synchronized void insertIntoRouter(List<Packet> q){
 		System.out.println("Packets input into the router");
 		for(Packet p : q)
 		{
