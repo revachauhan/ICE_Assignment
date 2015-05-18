@@ -47,9 +47,9 @@ public class ManagePacketsInsideRouter {
 			System.out.println(p.toString());
 		}
 		System.out.println();
-		queueSorting(q);
+		packetSorting(q);
 	}
-	private static  void queueSorting(List<Packet> q) {
+	private static  void packetSorting(List<Packet> q) {
 		System.out.println("After sorting on Packet");
 		Collections.sort(q, new PacketComparator());
 		System.out.println();

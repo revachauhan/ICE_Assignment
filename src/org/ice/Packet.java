@@ -3,11 +3,11 @@ package org.ice;
 public abstract class Packet {
 
 	String name;
-	int value;
+	int value; 
 	int size;
-	public int time;
-	public static int count = 1;
-
+	int time;
+	static int count = 1;
+	//Setter and getters
 	public String getName() {
 		return name;
 	}
@@ -35,6 +35,7 @@ public abstract class Packet {
 	public int getTime() {
 		return time;
 	}
+	//to string method for output to console
 	@Override
 	public String toString() {
 		return "Packet [name=" + name + ", size=" + size + ", time=" + time
