@@ -39,6 +39,7 @@ public class ManagePacketsInsideRouter {
 		packetQueue.add(p4);
 
 		insertIntoRouter(packetQueue);
+		packetSorting(packetQueue);
 	}
 	//synchronized to make it thread safe for concurrency 
 	private static synchronized void insertIntoRouter(List<Packet> q){
@@ -50,7 +51,7 @@ public class ManagePacketsInsideRouter {
 		System.out.println();
 		packetSorting(q);
 	}
-	private static  void packetSorting(List<Packet> q) {
+	private static synchronized void packetSorting(List<Packet> q) {
 		System.out.println("After sorting on Packet");
 		Collections.sort(q, new PacketComparator());
 		System.out.println();
